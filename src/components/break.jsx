@@ -1,7 +1,7 @@
 import React from "react";
 import Format from "../lib/timeformat";
 import { MdOutlineAdd } from 'react-icons/md'
-import { GrSubtract } from 'react-icons/gr'
+import { RiSubtractFill } from 'react-icons/ri'
 
 const Break = ({ period, inc, dec }) => {
   return (
@@ -10,7 +10,7 @@ const Break = ({ period, inc, dec }) => {
       <h2>{Format(period)}</h2>
       <div className="incremental-btns">
         <button onClick={() => inc("break")}>{<MdOutlineAdd />}</button>
-        <button onClick={() => dec("break")}>{<GrSubtract />}</button>
+        <button onClick={() => dec("break")}>{<RiSubtractFill />}</button>
       </div>
     </div>
   );

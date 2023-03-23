@@ -1,7 +1,7 @@
 import React from 'react'
 import Format from '../lib/timeformat'
 import { MdOutlineAdd } from 'react-icons/md'
-import { GrSubtract } from 'react-icons/gr'
+import { RiSubtractFill } from 'react-icons/ri'
 
 const Session = ({period, inc, dec}) => {
   return (
@@ -10,7 +10,7 @@ const Session = ({period, inc, dec}) => {
         <h2>{Format(period)}</h2>
         <div className="incremental-btns">
             <button onClick={() => inc('session')}>{<MdOutlineAdd />}</button>
-            <button onClick={() => dec('session')}>{<GrSubtract />}</button>
+            <button onClick={() => dec('session')}>{<RiSubtractFill />}</button>
         </div>
     </div>
   )

@@ -3,6 +3,9 @@ import "./App.css";
 import Timer from "./components/timer";
 import Session from "./components/session";
 import Break from "./components/break";
+import beep from './assets/beep-01a.mp3'
+
+const alarm = new Audio(beep)
 
 function App() {
   const [breakTime, setBreak] = useState(300); //break period amount
@@ -79,9 +82,11 @@ function App() {
   useEffect(() => {
     //when timer hits zero, switch from break to session, vice versa
     if (timer < 0 && timerType === "session") {
+      alarm.play()
       setType("break");
     }
     if (timer < 0 && timerType === "break") {
+      alarm.play()
       setType("session");
     }
   }, [timer]);
